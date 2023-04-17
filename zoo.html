@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>동물원 소개 페이지</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+      header{
+        text-align: center;
+        background-image: url(img/animal.png);
+        height: 200px;
+      }
+      header > h1{
+        margin-top: 100px;
+        width: 100%; 
+      }
+      nav{
+        text-align: center;
+      }
+      .menu {
+        font-weight: bold;
+         display: inline;
+         margin: 5%;
+        }
+        nav a:hover{
+            color: gray;
+        } 
+      a {
+        color: black;
+        text-decoration:none;
+       }
+       h2 {
+        text-align: center;
+       }
+       .heade {
+        font-weight: bold;
+        color: lightcoral;
+        font-size: large;
+        list-style-type: none;
+        text-align: center;
+        font-size: x-large;
+       }
+       main{
+        width: 1700px;
+        margin: 10px auto;
+      }
+      .left {
+        float: left;
+
+        text-align: center;
+        margin: 50px;
+        padding-left: 20px;
+        width: 700px;
+        font-size: large;
+       }
+       .right{
+        float: right;
+        margin: 0 50px;
+        padding-left: 20px;
+        width: 700px;
+       }
+       .top{
+        overflow: hidden;
+       }
+       #map{
+        float: left;
+        margin: 5px;
+       }
+       video{
+        display: inline;
+       }
+       footer{
+          background-color: rgb(236, 236, 236);
+          font-size: 13px;
+          background-repeat: no-repeat;
+          padding-left: 10%;
+        }
+        .search{
+          text-align: right;
+        }
+        video{
+          margin-left: 50px;
+          width: 360px;
+          height: 202px;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1><a href="zoo.html">폴리텍 공원</a></h1>
+    </header>
+    <hr>
+    <nav>
+      <ul>
+        <li class="menu"><a href="africa.html">아프리카</a></li>
+        <li class="menu"><a href="na.html">북아메리카</a></li>
+        <li class="menu"><a href="sa.html">남아메리카</a></li>
+        <li class="menu"><a href="australia.html">오스트레일리아</a></li>
+        <li class="menu"><input type="text" name="search" value="원하는 동물을 입력하세요">
+            <input type="button" value="검색"></li>
+      </ul>
+
+    </nav>
+    <hr>
+    
+    <main>
+        <section id="about">
+          <h2>동물원 마스코트</h2>
+          <div class="video_container">
+            <video controls="controls">
+              <source src="img/panda.mp4" type="video/mp4">
+            </video>
+            <video controls="controls">
+              <source src="img/capi.mp4" type="video/mp4">
+            </video>
+            <video controls="controls">
+              <source src="img/polar (1).mp4" type="video/mp4">
+            </video>
+            <video controls="controls">
+              <source src="img/tiger.mp4" type="video/mp4">
+            </video>
+          </div>
+        
+        <section id="animals">
+          <h2> 이용 안내</h2>
+          <div class="top">
+            <div class="left">
+              <ur>
+                <li class="heade">운영시간</li> <br>
+                <li>하절기(03월~10월) 09시 ~ 19시 (입장마감18시)</li> <br>
+                <li>동절기(11월~02월) 09시 ~ 18시 (입장마감17시)</li> <br><br>
+              </ur>
+              <ur>
+                <li class="heade">이벤트</li> <br>
+                <li>동물과의 만남: 먹이주기 체험 (12시 ~ 13시)</li> <br>
+                <li>동물원 투어: 전문가와 함께하는 동물원 투어</li> <br>
+              </ur>
+            </div>
+            <div class="right">
+              <h3>오시는 길</h3>
+              <img src="img/map.PNG" id="map">
+              <h4>지하철/버스</h4>
+              <p>이태원역 4번 출구로 나오신 후 좌측으로 뒤 돌아서 보광동 방향으로 내려가시면 80m 거리에 405번 421번 버스가 있습니다.
+                버스에서 하차후 50m 전방 우측에 한국폴리텍대학 서울정수캠퍼스 정문이 있습니다.</p> <br>
+              <p>숙대입구역에서 421번 버스(보광동방면)노선도 : 숙대입구역→삼각지역→전쟁기념관→녹사평역→이태원(용산구청)→
+                해밀턴호텔→보광동입구→한국폴리텍대학 서울정수캠퍼스</p>
+            </div>
+          </div>
+        </section>
+      </main>
+      <hr>
+      <footer>
+        <p>위치: 서울특별시 용산구 보광동 제 2공학관 5층</p>
+        <p>대표전화: 010-9139-6785</p>
+        <p>Copyright © 폴리텍공원</p>
+      </footer>
+      
+  </body>
+</html>
