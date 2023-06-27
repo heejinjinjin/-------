@@ -5,6 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script>
+      var $ = jQuery.noConflict(true);
+      $(document).ready(function() {
+        $("#toggleAnimalsButton").on("click", function() {
+          $(".animal_list").toggle();
+        });
+      });
+    </script>
     <style>
         body{
             margin-left: 50px;
@@ -92,16 +101,19 @@
         </article>
         <article>
             <h2>아프리카 대표 동물</h2>
-            <h4>코끼리 (Elephant)</h4>
-            <img src="img/afri-ele (1).jpg">
-            <h4>가젤 (Gazelle)</h4>
-            <img src="img/afri-gazel.jpg">
-            <h4>사자 (Lion)</h4>
-            <img src="img/afri-lion.jpg">
-            <h4>얼룩말 (Zebra)</h4>
-            <img src="img/afri-zebra.jpg">
-            <h4>기린 (Giraffe)</h4>
-            <img src="img/afri-girr.jpg">
+            <button id="toggleAnimalsButton">목록 보기▼</button>
+            <div class="animal_list" style="display: none;">
+              <h4>코끼리 (Elephant)</h4>
+              <img src="img/afri-ele (1).jpg">
+              <h4>가젤 (Gazelle)</h4>
+              <img src="img/afri-gazel.jpg">
+              <h4>사자 (Lion)</h4>
+              <img src="img/afri-lion.jpg">
+              <h4>얼룩말 (Zebra)</h4>
+              <img src="img/afri-zebra.jpg">
+              <h4>기린 (Giraffe)</h4>
+              <img src="img/afri-girr.jpg">
+            </div>
         </article>
     </section>
     

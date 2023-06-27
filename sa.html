@@ -5,6 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script>
+      var $ = jQuery.noConflict(true);
+      $(document).ready(function() {
+        $("#toggleAnimalsButton").on("click", function() {
+          $(".animal_list").toggle();
+        });
+      });
+    </script>
     <style>
         body{
             margin-left: 50px;
@@ -93,6 +102,8 @@
         </article>
         <article>
             <h2>남아메리카 대표 동물</h2>
+            <button id="toggleAnimalsButton">목록 보기▼</button>
+            <div class="animal_list" style="display: none;">
             <h4>토쿠라 (Toucan)</h4>
             <img src="img/sa-bird.jpg">
             <h4>카피바라 (Capybara)</h4>

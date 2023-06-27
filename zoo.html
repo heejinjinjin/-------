@@ -3,7 +3,52 @@
   <head>
     <title>동물원 소개 페이지</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script>
+     var $ = jQuery.noConflict(true);
+      $(document).ready(function() {
+
+        function showNotification() {
+          var message = "장마로 인해 오늘 동물들은 쉽니다."; // 알림 메시지 내용
+          alert(message); // 알림 메시지 표시
+        }
+
+        // 페이지 로딩 시 알림 메시지 표시 실행
+        showNotification();
+
+        var videos = [
+          "img/panda.mp4",
+          "img/capi.mp4",
+          "img/polar (1).mp4",
+          "img/tiger.mp4"
+        ];
+
+        var videoIndex = 0;
+
+        function changeVideo() {
+          var videoContainer = $(".video_container")[0];
+          var videoSource = videos[videoIndex];
+
+          // video 태그 업데이트
+          var videoElement = document.createElement("video");
+          videoElement.controls = "controls";
+          var sourceElement = document.createElement("source");
+          sourceElement.src = videoSource;
+          sourceElement.type = "video/mp4";
+          videoElement.appendChild(sourceElement);
+
+          // 기존 동영상 대체
+          videoContainer.innerHTML = "";
+          videoContainer.appendChild(videoElement);
+
+          // videoIndex 증가 및 범위 체크
+          videoIndex = (videoIndex + 1) % videos.length;
+        }
+
+        $("#changeVideoButton").on("click", changeVideo);
+      });
+
+    </script>
     <style>
       header{
         text-align: center;
@@ -46,7 +91,6 @@
       }
       .left {
         float: left;
-
         text-align: center;
         margin: 50px;
         padding-left: 20px;
@@ -66,9 +110,7 @@
         float: left;
         margin: 5px;
        }
-       video{
-        display: inline;
-       }
+
        footer{
           background-color: rgb(236, 236, 236);
           font-size: 13px;
@@ -79,9 +121,8 @@
           text-align: right;
         }
         video{
-          margin-left: 50px;
-          width: 360px;
-          height: 202px;
+          margin: 0 auto;
+          height: 600px;
         }
     </style>
   </head>
@@ -101,25 +142,16 @@
       </ul>
 
     </nav>
-    <hr>
-    
+    <hr>  
     <main>
         <section id="about">
           <h2>동물원 마스코트</h2>
-          <div class="video_container">
-            <video controls="controls">
-              <source src="img/panda.mp4" type="video/mp4">
-            </video>
-            <video controls="controls">
-              <source src="img/capi.mp4" type="video/mp4">
-            </video>
-            <video controls="controls">
-              <source src="img/polar (1).mp4" type="video/mp4">
-            </video>
-            <video controls="controls">
-              <source src="img/tiger.mp4" type="video/mp4">
-            </video>
-          </div>
+            <button id="changeVideoButton">다음 동영상</button>
+            <div class="video_container">
+              <video controls="controls">
+                <source src="img/panda.mp4" type="video/mp4">
+              </video>
+            </div>
         
         <section id="animals">
           <h2> 이용 안내</h2>
